@@ -1,0 +1,3 @@
+- At most 2 children per node
+- Exactly 1 root
+- Exactly 1 path b/w root and any node

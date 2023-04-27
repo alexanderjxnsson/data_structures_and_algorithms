@@ -23,32 +23,9 @@ Node* createNode(int data){
     return newNode;
 }
 
-void printTree_preorder(Node* root){
-    if(root == nullptr)
-        return;
-
-    std::cout<< root->data << std::endl;
-    printTree_preorder(root->left);
-    printTree_preorder(root->right);
-}
-
-void printTree_inorder(Node* root){
-    if(root == nullptr)
-        return;
-
-    printTree_inorder(root->left);
-    std::cout<< root->data << std::endl;
-    printTree_inorder(root->right);
-}
-
-void printTree_postorder(Node* root){
-    if(root == nullptr)
-        return;
-
-    printTree_postorder(root->left);
-    printTree_postorder(root->right);
-    std::cout<< root->data << std::endl;
-}
+void printTree_preorder(Node* root);
+void printTree_inorder(Node* root);
+void printTree_postorder(Node* root);
 
 int main(){
     // Level 1
@@ -78,4 +55,31 @@ int main(){
     printTree_postorder(root);
 
     return 0;
+}
+
+void printTree_preorder(Node* root){
+    if(root == nullptr)
+        return;
+
+    std::cout<< root->data << std::endl;
+    printTree_preorder(root->left);
+    printTree_preorder(root->right);
+}
+
+void printTree_inorder(Node* root){
+    if(root == nullptr)
+        return;
+
+    printTree_inorder(root->left);
+    std::cout<< root->data << std::endl;
+    printTree_inorder(root->right);
+}
+
+void printTree_postorder(Node* root){
+    if(root == nullptr)
+        return;
+
+    printTree_postorder(root->left);
+    printTree_postorder(root->right);
+    std::cout<< root->data << std::endl;
 }
