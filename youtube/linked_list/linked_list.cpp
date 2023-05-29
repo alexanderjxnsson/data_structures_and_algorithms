@@ -3,6 +3,8 @@
 // Last stores NULL
 // No random access, because random adresses. Only know where your first element are. Need to traverse from one to desired value
 // User defined data types for linked list
+// Node* because we dynamically change size of list
+
 #include <iostream>
 
 class Node{
